@@ -1,0 +1,16 @@
+.card-container{
+    background-color: red;
+    width: 200px;
+    height: 325px;
+    border-radius: 0.6rem;
+    display: grid;
+    place-items: center;
+  
+    img{
+      width: 80%;
+    }
+  
+    h1{
+      color: #fff;
+    }
+  }
