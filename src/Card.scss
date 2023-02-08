@@ -1,16 +1,23 @@
-.card-container{
-    background-color: red;
-    width: 200px;
-    height: 325px;
-    border-radius: 0.6rem;
-    display: grid;
-    place-items: center;
-  
-    img{
-      width: 80%;
-    }
-  
-    h1{
-      color: #fff;
-    }
+.Card{
+  background-color: red;
+  width: 200px;
+  height: 325px;
+  border-radius: 0.6rem;
+  display: grid;
+  place-items: center;
+
+  img{
+    width: 80%;
   }
+
+  h1{
+    color: #fff;
+  }
+}
+
+.card-holder{
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+  place-items: center;
+}
