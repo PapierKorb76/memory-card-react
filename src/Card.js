@@ -1,5 +1,5 @@
 import React from "react";
-import "./Card.scss";
+import "./card.scss";
 
 export default function Card({ sourceImg, text }) {
   return (
