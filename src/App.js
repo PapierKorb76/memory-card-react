@@ -2,19 +2,22 @@ import "./card.scss";
 import Card from "./Card";
 import { useEffect, useState } from "react";
 import cardArray from "./cardArray";
+import PointCounter from "./PointCounter";
 
 export default function App() {
   let [shuffle, setShuffle] = useState(false);
+  let [points, setPoints] = useState(0);
+  let [cardClicked, setCardClicked] = useState([]);
 
-  if (shuffle === true) {
-    setShuffle(false);
-  }
+  const unique = Array.from(new Set(cardClicked));
 
   useEffect(() => {
-    console.log(cardArray);
-  }, [shuffle]);
+    if (unique.length !== cardClicked.length) {
+      setPoints(0);
+    }
+  }, [cardClicked, shuffle, points, unique]);
 
-  function shuffleCards(e) {
+  function shuffleCards() {
     var i = 0,
       j = 0,
       temp = null;
@@ -25,6 +28,10 @@ export default function App() {
       cardArray[j] = temp;
     }
     setShuffle(true);
+    if (shuffle === true) {
+      setShuffle(false);
+    }
+    setPoints(points + 1);
   }
 
   const style = document.body.style;
@@ -39,11 +46,18 @@ export default function App() {
     <div className="App">
       <div className="card-holder">
         {cardArray.map((card) => (
-          <div key={card.id} onClick={shuffleCards}>
+          <div
+            key={card.id}
+            onClick={(e) => {
+              setCardClicked((cardClicked) => [...cardClicked, e.target.alt]);
+              shuffleCards();
+            }}
+          >
             <Card sourceImg={card.sourceImg} text={card.text} key={card.id} />
           </div>
         ))}
       </div>
+      <PointCounter points={points} />
     </div>
   );
 }
