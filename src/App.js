@@ -3,19 +3,25 @@ import Card from "./Card";
 import { useEffect, useState } from "react";
 import cardArray from "./cardArray";
 import PointCounter from "./PointCounter";
+import BestScore from "./BestScore";
 
 export default function App() {
   let [shuffle, setShuffle] = useState(false);
   let [points, setPoints] = useState(0);
   let [cardClicked, setCardClicked] = useState([]);
+  let [bestScore, setBestScore] = useState(0);
 
   const unique = Array.from(new Set(cardClicked));
 
   useEffect(() => {
     if (unique.length !== cardClicked.length) {
+      if (points > bestScore) {
+        setBestScore(points - 1);
+      }
       setPoints(0);
+      setCardClicked([]);
     }
-  }, [cardClicked, shuffle, points, unique]);
+  }, [cardClicked, shuffle, points, unique, bestScore]);
 
   function shuffleCards() {
     var i = 0,
@@ -58,6 +64,7 @@ export default function App() {
         ))}
       </div>
       <PointCounter points={points} />
+      <BestScore bestScore={bestScore} />
     </div>
   );
 }
