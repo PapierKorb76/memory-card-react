@@ -1,5 +1,5 @@
 import React from "react";
-import "./card.scss";
+import "./point-counter.scss";
 
 export default function BestScore({ bestScore }) {
   return (

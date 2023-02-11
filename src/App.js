@@ -1,9 +1,11 @@
 import "./card.scss";
+import "./point-counter.scss";
 import Card from "./Card";
-import { useEffect, useState } from "react";
 import cardArray from "./cardArray";
 import PointCounter from "./PointCounter";
 import BestScore from "./BestScore";
+import Navbar from "./Navbar";
+import { useEffect, useState } from "react";
 
 export default function App() {
   let [shuffle, setShuffle] = useState(false);
@@ -46,10 +48,16 @@ export default function App() {
     style.padding = "0px";
     style.width = "100%";
     style.height = "100vh";
+    style.background = "#555";
   });
 
   return (
     <div className="App">
+      <Navbar />
+      <div className="score-container">
+        <PointCounter points={points} />
+        <BestScore bestScore={bestScore} />
+      </div>
       <div className="card-holder">
         {cardArray.map((card) => (
           <div
@@ -63,8 +71,6 @@ export default function App() {
           </div>
         ))}
       </div>
-      <PointCounter points={points} />
-      <BestScore bestScore={bestScore} />
     </div>
   );
 }

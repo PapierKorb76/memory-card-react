@@ -35,6 +35,51 @@ let cardArray = [
     sourceImg: m2010img,
     text: "M2010",
     id: 5
+  },
+  {
+    sourceImg: beretta92img,
+    text: "BERETTA 92",
+    id: 6
+  },
+  {
+    sourceImg: glock17img,
+    text: "GLOCK 17",
+    id: 7
+  },
+  {
+    sourceImg: m2010img,
+    text: "M2010",
+    id: 8
+  },
+  {
+    sourceImg: beretta92img,
+    text: "BERETTA 92",
+    id: 9
+  },
+  {
+    sourceImg: glock17img,
+    text: "GLOCK 17",
+    id: 10
+  },
+  {
+    sourceImg: m2010img,
+    text: "M2010",
+    id: 12
+  },
+  {
+    sourceImg: beretta92img,
+    text: "BERETTA 92",
+    id: 13
+  },
+  {
+    sourceImg: glock17img,
+    text: "GLOCK 17",
+    id: 14
+  },
+  {
+    sourceImg: glock17img,
+    text: "GLOCK 17",
+    id: 15
   }
 ];
 
