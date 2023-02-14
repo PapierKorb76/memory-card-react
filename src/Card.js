@@ -1,5 +1,5 @@
 import React from "react";
-import "./card.scss";
+import "../src/assets/styling/card.scss";
 
 export default function Card({ sourceImg, text, description }) {
   return (

@@ -1,5 +1,5 @@
 import React from "react";
-import "./point-counter.scss";
+import "./assets/styling/point-counter.scss";
 
 export default function PointCounter({ points }) {
   return (

@@ -5,15 +5,10 @@
   column-gap: 4.5rem;
   font-family: sans-serif;
   
-  .PointCounter{
-    h1{
+  .PointCounter, .BestScore{
+    h1, h2{
       text-align: center;
-    }
-  }
-
-  .BestScore{
-    h1{
-      text-align: center;
+      color: #fff;
     }
   }
 }

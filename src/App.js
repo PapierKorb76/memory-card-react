@@ -1,5 +1,5 @@
-import "./card.scss";
-import "./point-counter.scss";
+import stylingCard from "../src/assets/styling/card.scss";
+import stylingPointCounter from "../src/assets/styling/point-counter.scss";
 import Card from "./Card";
 import cardArray from "./cardArray";
 import PointCounter from "./PointCounter";
@@ -35,10 +35,7 @@ export default function App() {
       cardArray[i] = cardArray[j];
       cardArray[j] = temp;
     }
-    setShuffle(true);
-    if (shuffle === true) {
-      setShuffle(false);
-    }
+    setShuffle(!shuffle);
     setPoints(points + 1);
   }
 
@@ -49,12 +46,13 @@ export default function App() {
     style.width = "100%";
     style.height = "100vh";
     style.background = "#555";
+    style.overflow = "hidden";
   });
 
   return (
     <div className="App">
       <Navbar />
-      <div className="score-container">
+      <div className="score-container" style={stylingPointCounter}>
         <PointCounter points={points} />
         <BestScore bestScore={bestScore} />
       </div>
@@ -62,12 +60,18 @@ export default function App() {
         {cardArray.map((card) => (
           <div
             key={card.id}
-            onClick={(e) => {
-              setCardClicked((cardClicked) => [...cardClicked, e.target.alt]);
+            onClick={() => {
+              setCardClicked((cardClicked) => [...cardClicked, card.text]);
               shuffleCards();
             }}
           >
-            <Card sourceImg={card.sourceImg} text={card.text} key={card.id} />
+            <Card
+              sourceImg={card.sourceImg}
+              text={card.text}
+              key={card.id}
+              description={card.description}
+              style={stylingCard}
+            />
           </div>
         ))}
       </div>
