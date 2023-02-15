@@ -1,0 +1,28 @@
+{
+  "files": {
+    "main.css": "/static/css/main.dfb8533a.css",
+    "main.js": "/static/js/main.949d9098.js",
+    "static/media/glock-17.png": "/static/media/glock-17.0e9a578dec3d37fb1435.png",
+    "static/media/benelli-m1.png": "/static/media/benelli-m1.8948105b339e4f5abb02.png",
+    "static/media/logo.png": "/static/media/logo.485696afe1344cb826e8.png",
+    "static/media/desert-eagle.png": "/static/media/desert-eagle.4cc72a7ae1a6aedb98e2.png",
+    "static/media/mp5.png": "/static/media/mp5.d8b99c5b471f4c8c3e53.png",
+    "static/media/beretta-92.png": "/static/media/beretta-92.d67b3d1e1b74569242e1.png",
+    "static/media/m2010.png": "/static/media/m2010.61fe00f49ceab385fa1b.png",
+    "static/media/saiga-12.png": "/static/media/saiga-12.128ba5c7981cc254544a.png",
+    "static/media/kriss-vector.png": "/static/media/kriss-vector.ba530495b27afb0ade9f.png",
+    "static/media/ak-47.png": "/static/media/ak-47.393cac2459c5a11b2983.png",
+    "static/media/m60.png": "/static/media/m60.741bdd24a21cebfcdb19.png",
+    "static/media/mosin-nagant.png": "/static/media/mosin-nagant.bf0da6e7780fa5c09677.png",
+    "static/media/smith&wesson629.png": "/static/media/smith&wesson629.1507922f41436619ccfa.png",
+    "static/media/spas-12.png": "/static/media/spas-12.122ace8b5f1bedfb6d21.png",
+    "static/media/m16.png": "/static/media/m16.481033e9687a13363a5a.png",
+    "index.html": "/index.html",
+    "main.dfb8533a.css.map": "/static/css/main.dfb8533a.css.map",
+    "main.949d9098.js.map": "/static/js/main.949d9098.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.dfb8533a.css",
+    "static/js/main.949d9098.js"
+  ]
+}
